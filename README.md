@@ -1,2 +1,2 @@
 # BaitapCanhanAI
-![DFS](DFS.gif)
+DFS.gif
