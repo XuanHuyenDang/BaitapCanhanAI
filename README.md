@@ -1,2 +1,2 @@
 # BaitapCanhanAI
-DFS.gif
+[Kiểm tra ảnh](DFS.gif)
