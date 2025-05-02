@@ -1,2 +1,2 @@
 # BaitapCanhanAI
-![DFS demo](DFS.gif)
+![Uninformed Search Algorithms](UninformedSearchAlgorithms.gif)
