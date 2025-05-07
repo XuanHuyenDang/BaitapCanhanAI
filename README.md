@@ -26,7 +26,7 @@ Solution (giải pháp) là một chuỗi các hành động hoặc trạng thá
 - BFS (Breadth-First Search): Đảm bảo tìm được giải pháp ngắn nhất nhưng tốn rất nhiều bộ nhớ và thời gian khi không gian trạng thái lớn, dễ bị bùng nổ tổ hợp trong 8-puzzle.
 - UCS (Uniform-Cost Search): Tương tự BFS nhưng xét chi phí đường đi, đảm bảo tìm giải pháp tối ưu theo chi phí, tuy nhiên cũng rất tốn bộ nhớ và thời gian trong bài toán 8-puzzle.
 - IDS (Iterative Deepening Search): Kết hợp ưu điểm của DFS và BFS, tiết kiệm bộ nhớ hơn BFS, tránh vòng lặp của DFS, nhưng thường chậm hơn do phải lặp lại tìm kiếm nhiều lần; vẫn chưa hiệu quả bằng các thuật toán heuristic trong 8-puzzle.
-- *Tóm lại,* các thuật toán không thông tin này đều có hạn chế về hiệu suất khi áp dụng cho bài toán 8-puzzle do không sử dụng thông tin hướng dẫn, dẫn đến tốn nhiều thời gian và bộ nhớ
+*Tóm lại,* các thuật toán không thông tin này đều có hạn chế về hiệu suất khi áp dụng cho bài toán 8-puzzle do không sử dụng thông tin hướng dẫn, dẫn đến tốn nhiều thời gian và bộ nhớ
 #### *2.2. Informed Search Algorithms*
 Một bài toán tìm kiếm thường bao gồm các thành phần cơ bản sau:
 - Trạng thái ban đầu (Initial state): Trạng thái xuất phát của bài toán.
@@ -55,5 +55,42 @@ Solution (Giải pháp): Chuỗi các hành động hoặc trạng thái từ tr
 - Simulated Annealing cải thiện khả năng thoát khỏi cực trị địa phương, phù hợp với bài toán 8-puzzle phức tạp.
 - Beam Search giúp cân bằng giữa bộ nhớ và thời gian, hiệu quả nếu chọn beam width phù hợp.
 - Genetic Algorithm có thể tìm lời giải tốt trong không gian trạng thái lớn nhưng cần nhiều tính toán và tinh chỉnh tham số.
-
 *Tóm lại,* Tìm kiếm cục bộ và tiến hóa cung cấp các phương pháp linh hoạt, có thể áp dụng trong 8-puzzle để tìm lời giải gần tối ưu nhanh hơn so với tìm kiếm toàn diện, nhưng không đảm bảo tối ưu tuyệt đối.
+#### *2.4. Searching in Complex Environments*
+Một bài toán tìm kiếm trong môi trường phức tạp thường bao gồm các thành phần sau:
+- Không gian trạng thái (State space): Tập hợp tất cả các trạng thái có thể xảy ra trong môi trường, mô tả các cấu hình hoặc vị trí khác nhau của hệ thống.
+- Trạng thái ban đầu (Initial state): Trạng thái xuất phát, nơi quá trình tìm kiếm bắt đầu.
+- Trạng thái đích hoặc mục tiêu (Goal state): Trạng thái hoặc tập hợp trạng thái mà ta muốn đạt tới.
+- Toán tử chuyển trạng thái (Actions/Operators): Các phép biến đổi cho phép chuyển từ trạng thái này sang trạng thái khác trong không gian trạng thái.
+- Hàm kiểm tra trạng thái đích (Goal test): Hàm xác định xem trạng thái hiện tại có phải là trạng thái mục tiêu hay không.
+- Thông tin quan sát (Observability): Trong môi trường phức tạp, có thể trạng thái không được quan sát đầy đủ hoặc chỉ quan sát một phần, dẫn đến các bài toán tìm kiếm một phần quan sát (partially observable).
+- Mô hình môi trường (Model of environment): Mô tả cách trạng thái chuyển đổi dựa trên hành động, có thể là xác định hoặc ngẫu nhiên.
+Solution là một chuỗi các hành động hoặc kế hoạch (plan) từ trạng thái ban đầu đến trạng thái mục tiêu, sao cho thỏa mãn các ràng buộc của môi trường và đạt được mục tiêu đề ra.
+
+#### *Nhận xét:*
+Các thuật toán tìm kiếm trong môi trường phức tạp như AND-OR, Sensorless, và tìm kiếm trong môi trường quan sát một phần đều phải đối mặt với độ phức tạp rất lớn khi áp dụng cho bài toán 8-puzzle do không gian trạng thái rộng và các hạn chế trong quan sát. Vì vậy, hiệu suất của chúng thường kém và khó áp dụng trực tiếp cho 8-puzzle kích thước đầy đủ mà không có các kỹ thuật tối ưu hóa hoặc giảm không gian trạng thái.
+#### *2.5. Constraint Satisfaction Problems* 
+Các thành phần cơ bản của một bài toán CSP bao gồm:
+- Tập biến (Variables): Tập hợp các biến cần gán giá trị (ví dụ: X1, X2, ..., Xn).
+- Miền giá trị (Domains): Mỗi biến có một miền giá trị khả dĩ (ví dụ: D1, D2, ..., Dn), là các giá trị mà biến đó có thể nhận.
+- Tập ràng buộc (Constraints): Các điều kiện hoặc quan hệ giữa các biến, xác định các tổ hợp giá trị hợp lệ giữa một hoặc nhiều biến.
+- Hàm kiểm tra ràng buộc (Constraint Checking): Hàm dùng để kiểm tra xem một phép gán giá trị có thỏa mãn tất cả các ràng buộc hay không.
+Solution của CSP là một phép gán giá trị cho tất cả các biến sao cho mọi ràng buộc đều được thỏa mãn
+
+#### *Nhận xét:*
+Trong nhóm CSP, các thuật toán Backtracking-Search và Forward-Checking có thể áp dụng cho 8-puzzle nhưng hiệu suất thấp hơn nhiều so với các thuật toán heuristic như A*. Min-Conflicts không phù hợp cho 8-puzzle vì đặc trưng không gian trạng thái và yêu cầu lời giải tối ưu. Forward-Checking chỉ mang lại cải thiện nhỏ so với backtracking thuần túy trong trường hợp này.
+#### *2.6. Introduction to Reinforcement Learning* 
+Bài toán tìm kiếm trong Reinforcement Learning bao gồm các thành phần cơ bản sau:
+- Agent (Tác tử): Là đối tượng ra quyết định, thực hiện các hành động trong môi trường để đạt mục tiêu tối ưu hóa phần thưởng.
+- Environment (Môi trường): Là bối cảnh hoặc hệ thống mà agent tương tác, có trạng thái thay đổi theo các hành động của agent.
+- State (Trạng thái): Mô tả tình trạng hiện tại của môi trường mà agent quan sát được.
+- Action (Hành động): Các lựa chọn hoặc thao tác mà agent có thể thực hiện để thay đổi trạng thái môi trường.
+- Reward (Phần thưởng): Phản hồi từ môi trường sau mỗi hành động, thể hiện mức độ hiệu quả của hành động đó.
+- Policy (Chính sách): Chiến lược hoặc quy tắc mà agent sử dụng để chọn hành động dựa trên trạng thái hiện tại.
+- Value function (Hàm giá trị): Ước lượng tổng phần thưởng kỳ vọng mà agent có thể nhận được từ trạng thái hiện tại trở đi.
+- Model of Environment (Mô hình môi trường, nếu có): Mô tả cách môi trường chuyển trạng thái và phần thưởng dựa trên hành động của agent.
+
+Solution trong Reinforcement Learning là một chính sách tối ưu, tức là một hàm ánh xạ từ trạng thái sang hành động sao cho tổng phần thưởng tích lũy (cumulative reward) được tối đa hóa theo thời gian.
+
+#### *Nhận xét:*
+Q-Learning truyền thống không phải là phương pháp tối ưu cho bài toán 8-puzzle do không gian trạng thái lớn và phức tạp. Thuật toán này có thể học được chính sách giải nhưng thường rất chậm và tốn nhiều tài nguyên. Các phương pháp kết hợp học sâu (Deep Reinforcement Learning) hoặc các thuật toán heuristic đặc thù thường được ưu tiên hơn trong nhóm trò chơi 8-puzzle để đạt hiệu suất cao hơn.
