@@ -20,6 +20,7 @@ Một bài toán tìm kiếm trong trí tuệ nhân tạo thường bao gồm c�
 - Chi phí (Cost function): Chi phí để đi từ trạng thái này sang trạng thái khác (nếu có).
 
 Solution (giải pháp) là một chuỗi các hành động hoặc trạng thái từ trạng thái khởi đầu đến trạng thái đích thỏa mãn bài toán tìm kiếm. Nó là kết quả cuối cùng mà thuật toán tìm kiếm trả về khi tìm được đường đi hoặc phương án thỏa mãn điều kiện mục tiêu
+
 ![Uninformed Search Algorithms](UninformedSearchAlgorithms.gif)
 #### *Nhận xét:*
 - DFS (Depth-First Search): Duyệt sâu vào nhánh trước, tốn ít bộ nhớ nhưng dễ rơi vào vòng lặp vô hạn và không đảm bảo tìm giải pháp tối ưu; không phù hợp cho không gian trạng thái lớn như 8-puzzle.
@@ -35,6 +36,7 @@ Một bài toán tìm kiếm thường bao gồm các thành phần cơ bản sa
 - Hàm chi phí (Cost function): Chi phí thực hiện mỗi hành động hoặc di chuyển giữa các trạng thái.
 - Hàm kiểm tra trạng thái đích (Goal test): Kiểm tra xem trạng thái hiện tại có phải là trạng thái đích không.
 Solution (giải pháp) là chuỗi các hành động hoặc trạng thái từ trạng thái ban đầu đến trạng thái đích, thỏa mãn yêu cầu của bài toán tìm kiếm.
+
 ![Informed Search Algorithms](InformedSearchAlgorithms.gif)
 #### *Nhận xét:*
 - Thuật toán A* là lựa chọn hàng đầu cho bài toán 8-puzzle nhờ khả năng tìm lời giải tối ưu với hiệu suất tốt khi sử dụng hàm heuristic phù hợp.
@@ -49,6 +51,7 @@ Các thành phần chính của bài toán tìm kiếm
 - Hàm chi phí (Cost function): Chi phí thực hiện hành động hoặc di chuyển.
 - Hàm đánh giá (Heuristic function): Ước lượng mức độ gần trạng thái hiện tại đến trạng thái đích (đặc biệt trong tìm kiếm có thông tin).
 Solution (Giải pháp): Chuỗi các hành động hoặc trạng thái từ trạng thái ban đầu đến trạng thái đích thỏa mãn yêu cầu bài toán.
+
 ![Local Search](LocalSearch.gif)
 #### *Nhận xét:*
 - Các thuật toán Hill Climbing đơn giản nhanh nhưng dễ bị kẹt tại cực trị địa phương, không đảm bảo tìm lời giải tối ưu trong 8-puzzle.
