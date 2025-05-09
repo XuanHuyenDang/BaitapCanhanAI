@@ -94,5 +94,7 @@ Bài toán tìm kiếm trong Reinforcement Learning bao gồm các thành phần
 
 Solution trong Reinforcement Learning là một chính sách tối ưu, tức là một hàm ánh xạ từ trạng thái sang hành động sao cho tổng phần thưởng tích lũy (cumulative reward) được tối đa hóa theo thời gian.
 
+![Q-Learning](Q-learning.gif)
+
 #### *Nhận xét:*
 Q-Learning truyền thống không phải là phương pháp tối ưu cho bài toán 8-puzzle do không gian trạng thái lớn và phức tạp. Thuật toán này có thể học được chính sách giải nhưng thường rất chậm và tốn nhiều tài nguyên. Các phương pháp kết hợp học sâu (Deep Reinforcement Learning) hoặc các thuật toán heuristic đặc thù thường được ưu tiên hơn trong nhóm trò chơi 8-puzzle để đạt hiệu suất cao hơn.
