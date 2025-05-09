@@ -76,7 +76,9 @@ Các thành phần cơ bản của một bài toán CSP bao gồm:
 - Tập ràng buộc (Constraints): Các điều kiện hoặc quan hệ giữa các biến, xác định các tổ hợp giá trị hợp lệ giữa một hoặc nhiều biến.
 - Hàm kiểm tra ràng buộc (Constraint Checking): Hàm dùng để kiểm tra xem một phép gán giá trị có thỏa mãn tất cả các ràng buộc hay không.
 Solution của CSP là một phép gán giá trị cho tất cả các biến sao cho mọi ràng buộc đều được thỏa mãn
-[!CSPs](CSPs.gif)
+
+![CSPs](CSPs.gif)
+
 #### *Nhận xét:*
 Trong nhóm CSP, các thuật toán Backtracking-Search và Forward-Checking có thể áp dụng cho 8-puzzle nhưng hiệu suất thấp hơn nhiều so với các thuật toán heuristic như A*. Min-Conflicts không phù hợp cho 8-puzzle vì đặc trưng không gian trạng thái và yêu cầu lời giải tối ưu. Forward-Checking chỉ mang lại cải thiện nhỏ so với backtracking thuần túy trong trường hợp này.
 #### *2.6. Introduction to Reinforcement Learning* 
