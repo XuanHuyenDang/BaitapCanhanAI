@@ -69,6 +69,8 @@ Một bài toán tìm kiếm trong môi trường phức tạp thường bao g�
 - Thông tin quan sát (Observability): Trong môi trường phức tạp, có thể trạng thái không được quan sát đầy đủ hoặc chỉ quan sát một phần, dẫn đến các bài toán tìm kiếm một phần quan sát (partially observable).
 - Mô hình môi trường (Model of environment): Mô tả cách trạng thái chuyển đổi dựa trên hành động, có thể là xác định hoặc ngẫu nhiên.
 Solution là một chuỗi các hành động hoặc kế hoạch (plan) từ trạng thái ban đầu đến trạng thái mục tiêu, sao cho thỏa mãn các ràng buộc của môi trường và đạt được mục tiêu đề ra.
+![Complex](Complex.gif)
+![Complex Execute](Complex.png)
 
 #### *Nhận xét:*
 Các thuật toán tìm kiếm trong môi trường phức tạp như AND-OR, Sensorless, và tìm kiếm trong môi trường quan sát một phần đều phải đối mặt với độ phức tạp rất lớn khi áp dụng cho bài toán 8-puzzle do không gian trạng thái rộng và các hạn chế trong quan sát. Vì vậy, hiệu suất của chúng thường kém và khó áp dụng trực tiếp cho 8-puzzle kích thước đầy đủ mà không có các kỹ thuật tối ưu hóa hoặc giảm không gian trạng thái.
@@ -101,3 +103,15 @@ Solution trong Reinforcement Learning là một chính sách tối ưu, tức l�
 
 #### *Nhận xét:*
 Q-Learning truyền thống không phải là phương pháp tối ưu cho bài toán 8-puzzle do không gian trạng thái lớn và phức tạp. Thuật toán này có thể học được chính sách giải nhưng thường rất chậm và tốn nhiều tài nguyên. Các phương pháp kết hợp học sâu (Deep Reinforcement Learning) hoặc các thuật toán heuristic đặc thù thường được ưu tiên hơn trong nhóm trò chơi 8-puzzle để đạt hiệu suất cao hơn.
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------
