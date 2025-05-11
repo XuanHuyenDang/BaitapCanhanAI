@@ -115,3 +115,4 @@ Q-Learning truyền thống không phải là phương pháp tối ưu cho bài 
 
 
 -------------------------------------------
+SVTH: Đặng Xuân Huyền
