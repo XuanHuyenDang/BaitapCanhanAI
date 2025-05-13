@@ -6,7 +6,7 @@ Trong đồ án cá nhân, các nhóm thuật toán tìm kiếm trong Trí tuệ
 - Thuật toán tìm kiếm có thông tin (Informed Search) như A*, IDA* và Greedy Best-First Search, sử dụng heuristic để tối ưu hóa hiệu quả tìm kiếm; 
 - Tìm kiếm cục bộ (Local Search) như Hill Climbing, Steepest Ascent Hill Climbing, Simple Hill Climbing Simulated Annealing, Stochastic Hill Climbing và Beam Search tập trung vào việc cải thiện nghiệm cục bộ mà không cần duy trì toàn bộ không gian trạng thái; 
 - Tìm kiếm trong môi trường phức tạp (Searching in Complex Environments) như AND-OR Graph Search, Searching for a partially observation, Sensorless mở rộng khả năng ứng dụng sang các bài toán có tính động và không chắc chắn, định hướng cho các nghiên cứu nâng cao; 
-- Bài toán thỏa mãn ràng buộc (Constraint Satisfaction Problems - CSP) như Min-conflicts search, Forward-Checking, Backtracking nhằm khảo sát khả năng biểu diễn 8-puzzle dưới dạng hệ thống ràng buộc logic; 
+- Bài toán thỏa mãn ràng buộc (Constraint Satisfaction Problems - CSP) như Forward-Checking, Backtracking nhằm khảo sát khả năng biểu diễn 8-puzzle dưới dạng hệ thống ràng buộc logic; 
 - Cuối cùng là học tăng cường (Reinforcement Learning), cụ thể là thuật toán Q-learning, cho phép tác nhân học cách giải quyết bài toán thông qua việc tương tác với môi trường.
 Việc triển khai và so sánh các nhóm thuật toán này không chỉ giúp đánh giá hiệu quả của từng phương pháp mà còn mở ra các hướng tiếp cận đa dạng, góp phần làm phong phú thêm ứng dụng của Trí tuệ nhân tạo trong giải quyết các bài toán tìm kiếm.
 ### 2. Nội dung
@@ -85,7 +85,7 @@ Solution của CSP là một phép gán giá trị cho tất cả các biến sa
 ![CSPs](CSPs.gif)
 
 #### *Nhận xét:*
-Trong nhóm CSP, các thuật toán Backtracking-Search và Forward-Checking có thể áp dụng cho 8-puzzle nhưng hiệu suất thấp hơn nhiều so với các thuật toán heuristic như A*. Min-Conflicts không phù hợp cho 8-puzzle vì đặc trưng không gian trạng thái và yêu cầu lời giải tối ưu. Forward-Checking chỉ mang lại cải thiện nhỏ so với backtracking thuần túy trong trường hợp này.
+Trong nhóm CSP, các thuật toán Backtracking-Search và Forward-Checking có thể áp dụng cho 8-puzzle nhưng hiệu suất thấp hơn nhiều so với các thuật toán heuristic như A*. Forward-Checking chỉ mang lại cải thiện nhỏ so với backtracking thuần túy trong trường hợp này.
 #### *2.6. Introduction to Reinforcement Learning* 
 Bài toán tìm kiếm trong Reinforcement Learning bao gồm các thành phần cơ bản sau:
 - Agent (Tác tử): Là đối tượng ra quyết định, thực hiện các hành động trong môi trường để đạt mục tiêu tối ưu hóa phần thưởng.
